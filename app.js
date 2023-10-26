@@ -45,7 +45,7 @@ for (let i = 0; i < questions.length; i++) {
         alert("Question " + (i + 1) + ": Sorry Dummy!!! Your wrong.");
     }
 }
-// Function for guessing Game
+// Function for guessing Game with 4 guesses
 function letsPlayaGame() {
     const maxGuesses = 4;
     let correctNumber = 21; // the correct number
@@ -67,8 +67,30 @@ function letsPlayaGame() {
   
     alert("Sorry, you've used all your turns. The correct number was " + correctNumber);
   }
-  
-    
+   // Define the question and possible correct answers
+let q7 = "Can you name a one of my favorite candies.";
+const correctAnswers = ["twix", "snickers", "m&m"];
+let attempts = 6;
+let correctAnswer = false;
+
+alert(q7);
+
+while (attempts > 0 && !correctAnswer) {
+    const userGuess = prompt(`You have ${attempts} attempts left. Guess a color:`).toLowerCase();
+
+    if (correctAnswers.includes(userGuess)) {
+        alert("Correct! That's one of the colors of the rainbow.");
+        correctAnswer = true;
+    } else {
+        attempts--;
+        if (attempts > 0) {
+            alert(`Sorry, that's not a correct answer. You have ${attempts} attempts left.`);
+        } else {
+            alert(`Sorry, you've used all your attempts. The correct answers are: ${correctAnswers.join(', ')}`);
+        }
+    }
+}
+
    
 // Welcome message
 alert("Hey," + uname + "Thanks for comming to my page.")
