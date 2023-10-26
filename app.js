@@ -76,7 +76,7 @@ let correctAnswer = false;
 alert(q7);
 
 while (attempts > 0 && !correctAnswer) {
-    const userGuess = prompt(`You have ${attempts} attempts left. Guess a color:`).toLowerCase();
+    const userGuess = prompt(`You have ${attempts} attempts left. Guess a candy:`).toLowerCase();
 
     if (correctAnswers.includes(userGuess)) {
         alert("Correct! That's one of the colors of the rainbow.");
