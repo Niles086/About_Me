@@ -1,11 +1,11 @@
 // guessing game questions
 
 const questions = [
-    "What's my favorite Anime?",
-    "What's my favorite Anime Character?",
-    "At what age did I graduate from school?",
-    "How many pets do I have?",
-    "What type of pets do i have?"
+    "Do you like Anime?",
+    "Are you over the age of 18?",
+    "Did you graduate from high school?",
+    "Do I have pets?",
+    "Do you like Scifi?"
 
 ]
 
