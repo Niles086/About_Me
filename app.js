@@ -45,6 +45,52 @@ for (let i = 0; i < questions.length; i++) {
         alert("Question " + (i + 1) + ": Sorry Dummy!!! Your wrong.");
     }
 }
+// Function for guessing Game
+function letsPlayaGame() {
+    const maxGuesses = 4;
+    let correctNumber = 21; // the correct number
+  
+    alert("Let's play a game! You have 4 attempts to guess the correct number between 1 and 50.");
+  
+    for (let attempt = 1; attempt <= maxGuesses; attempt++) {
+      const userGuess = parseInt(prompt("Guess the number:"));
+  
+      if (userGuess === correctNumber) {
+        alert("Thats crazy. You guessed the right number.");
+        return; // Exit the game
+      } else if (userGuess < correctNumber) {
+        alert("Too low! You can do better.");
+      } else {
+        alert("Too high! You can do better.");
+      }
+    }
+  
+    alert("Sorry, you've used all your turns. The correct number was " + correctNumber);
+  }
+  
+  // Add event listeners to each submit button
+  for (let i = 1; i <= questions.length; i++) {
+    const submitButton = document.getElementById(`submit${i}`);
+    submitButton.addEventListener("click", function () {
+      const userInput = document.getElementById(`userInput${i}`).value.toLowerCase();
+      const messageElement = document.getElementById(`q${i}`);
+  
+      if (isAnswerCorrect(userInput, i - 1)) {
+        messageElement.textContent = "Correct!";
+      } else {
+        messageElement.textContent = "Wrong answer. Try again.";
+      }
+    });
+  }
+  
+  // Add an event listener for the 6th question
+  const submitGuessButton = document.getElementById("submitGuess");
+  submitGuessButton.addEventListener("click", function () {
+      playGuessingGame();
+    });
+    
+    //   function call
+    letsPlayaGame();
 // Welcome message
 alert("Hey," + uname + "Thanks for comming to my page.")
 
