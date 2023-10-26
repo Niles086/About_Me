@@ -1,4 +1,5 @@
 "use strict";
+
 // Variable defined as uname for prompt to get users name
 let uname;
 do {
@@ -67,8 +68,11 @@ function letsPlayaGame() {
   
     alert("Sorry, you've used all your turns. The correct number was " + correctNumber);
   }
+letsPlayaGame();
+
    // Define the question and possible correct answers
-let q7 = "Can you name a one of my favorite candies.";
+function candyCrush() {
+let q7 = "Can you name one of my favorite candies.";
 const correctAnswers = ["twix", "snickers", "m&m"];
 let attempts = 6;
 let correctAnswer = false;
@@ -79,7 +83,7 @@ while (attempts > 0 && !correctAnswer) {
     const userGuess = prompt(`You have ${attempts} attempts left. Guess a candy:`).toLowerCase();
 
     if (correctAnswers.includes(userGuess)) {
-        alert("Correct! That's one of the colors of the rainbow.");
+        alert("Correct! That's one of my favorites!");
         correctAnswer = true;
     } else {
         attempts--;
@@ -90,8 +94,10 @@ while (attempts > 0 && !correctAnswer) {
         }
     }
 }
+}
 
-   
+candyCrush();
+
 // Welcome message
 alert("Hey," + uname + "Thanks for comming to my page.")
 
