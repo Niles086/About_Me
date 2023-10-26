@@ -2,6 +2,13 @@ body {
     background-color: rgb(235, 255, 255);
 }
 
+h1 {
+    color: red;
+    font-size: larger;
+    font-style: italic;
+    font: message-box;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
