@@ -49,31 +49,31 @@ for (let i = 0; i < questions.length; i++) {
 // Function for guessing Game with 4 guesses
 function letsPlayaGame() {
     const maxGuesses = 4;
-    let correctNumber = 21; // the correct number
+    let correctAnswers = 21; // the correct number
   
     alert("Let's play a game! You have 4 attempts to guess the correct number between 1 and 50.");
   
     for (let attempt = 1; attempt <= maxGuesses; attempt++) {
       const userGuess = parseInt(prompt("Guess the number:"));
   
-      if (userGuess === correctNumber) {
+      if (userGuess === correctAnswers) {
         alert("Thats crazy. You guessed the right number.");
         return; // Exit the game
-      } else if (userGuess < correctNumber) {
+      } else if (userGuess < correctAnswers) {
         alert("Too low! You can do better.");
       } else {
         alert("Too high! You can do better.");
       }
     }
   
-    alert("Sorry, you've used all your turns. The correct number was " + correctNumber);
+    alert("Sorry, you've used all your turns. The correct number was " + correctAnswers);
   }
 letsPlayaGame();
 
    // Define the question and possible correct answers
 function candyCrush() {
 let q7 = "Can you name one of my favorite candies.";
-const correctAnswers = ["twix", "snickers", "m&m"];
+let correctAnswers = ["twix", "snickers", "m&m"];
 let attempts = 6;
 let correctAnswer = false;
 
@@ -99,5 +99,5 @@ while (attempts > 0 && !correctAnswer) {
 candyCrush();
 
 // Welcome message
-alert("Hey," + uname + "Thanks for comming to my page.")
+alert("Hey," + uname + " Thanks for comming to my page.")
 
