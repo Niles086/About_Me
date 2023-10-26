@@ -1,12 +1,16 @@
 "use strict";
 // Variable defined as uname for prompt to get users name
-let uname = prompt("Whats your name");
+let uname;
+do {
+    uname = prompt("What's your name");
+} while (!uname); // Keep prompting until a non-empty input is received
 // Made new variable named length and assigned it the value of the length of the user's name. The uname.length property returns the number of characters in the uname string, and that gets stored in the length variable.
 let length = uname.length;
 // For loop with the variable char to represent character length to make sure the user enters a name as lon as field is blank it will keep asking
 for (let char = 0; char < length; char++) {
     console.log(uname[char]);
 }
+alert(uname + " Please answer the following questions yes/y or no/n.");
 // Make a list of questions I want to ask user and store them in an array.
 const questions = [
     "Do I like Anime?",
