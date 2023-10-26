@@ -1,0 +1,50 @@
+body {
+    background-color: rgb(235, 255, 255);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(154, 154, 154); /* Button background color */
+    color: rgb(5, 5, 5); /* Text color */
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.bubble {
+    font-family: Arial, sans-serif;
+    font-size: 48px;
+    background: linear-gradient(45deg, hsl(231, 77%, 67%), #2beac7);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    display: inline;
+}
+
+.centered-image {
+    display: block;
+    margin: 0 auto;
+}
+
+.body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: 0.02em;
+    color: #333; /* Text color in hexadecimal or other color representations */
+}
