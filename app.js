@@ -47,3 +47,4 @@ for (let i = 0; i < questions.length; i++) {
 }
 // Welcome message
 alert("Hey," + uname + "Thanks for comming to my page.")
+
