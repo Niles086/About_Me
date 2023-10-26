@@ -34,9 +34,9 @@ for (let i = 0; i < questions.length; i++) {
 
 // New for loop to check users answers
 for (let i = 0; i < questions.length; i++) {
-    const normalizedAnswer = answers[i].toLowerCase(); // Pull the correct answer for each question.
+    const correctAnswer = answers[i].toLowerCase(); // Pull the correct answer for each question.
     // Now I compare the users answer with the correct answer. If the users answer is the same as the correct answer, the code tells them it's correct.
-    if (userAnswers[i] === normalizedAnswer || (userAnswers[i] === 'y' && normalizedAnswer === 'yes') || (userAnswers[i] === 'n' && normalizedAnswer === 'no')) {
+    if (userAnswers[i] === correctAnswer || (userAnswers[i] === 'y' && correctAnswer === 'yes') || (userAnswers[i] === 'n' && correctAnswer === 'no')) {
         // console.log("Question " + (i + 1) + ": Correct!");
         alert("Question " + (i + 1) + ": Correct!");
     } else {
@@ -68,26 +68,6 @@ function letsPlayaGame() {
     alert("Sorry, you've used all your turns. The correct number was " + correctNumber);
   }
   
-//   // Add event listeners to each submit button
-//   for (let i = 1; i <= questions.length; i++) {
-//     const submitButton = document.getElementById(`submit${i}`);
-//     submitButton.addEventListener("click", function () {
-//       const userInput = document.getElementById(`userInput${i}`).value.toLowerCase();
-//       const messageElement = document.getElementById(`q${i}`);
-  
-//       if (isAnswerCorrect(userInput, i - 1)) {
-//         messageElement.textContent = "Correct!";
-//       } else {
-//         messageElement.textContent = "Wrong answer. Try again.";
-//       }
-//     });
-//   }
-  
-//   // Add an event listener for the 6th question
-//   const submitGuessButton = document.getElementById("submitGuess");
-//   submitGuessButton.addEventListener("click", function () {
-//       playGuessingGame();
-//     });
     
    
 // Welcome message
