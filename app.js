@@ -42,7 +42,7 @@ for (let i = 0; i < questions.length; i++) {
     } else {
         // If the users answer is different from the correct answer, the loop will tell them Sorry Dummy!!! and ask them to try again.
         // console.log("Question " + (i + 1) + ": Sorry Dummy!!! Try again.");
-        alert("Question " + (i + 1) + ": Sorry Dummy!!! Try again.");
+        alert("Question " + (i + 1) + ": Sorry Dummy!!! Your wrong.");
     }
 }
 // Welcome message
