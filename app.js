@@ -89,8 +89,7 @@ function letsPlayaGame() {
       playGuessingGame();
     });
     
-    //   function call
-    letsPlayaGame();
+   
 // Welcome message
 alert("Hey," + uname + "Thanks for comming to my page.")
 
