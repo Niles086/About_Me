@@ -1,5 +1,6 @@
 "use strict";
 
+let count = 0
 // Variable defined as uname for prompt to get users name
 let uname;
 do {
@@ -38,6 +39,7 @@ for (let i = 0; i < questions.length; i++) {
     const correctAnswer = answers[i].toLowerCase(); // Pull the correct answer for each question.
     // Now I compare the users answer with the correct answer. If the users answer is the same as the correct answer, the code tells them it's correct.
     if (userAnswers[i] === correctAnswer || (userAnswers[i] === 'y' && correctAnswer === 'yes') || (userAnswers[i] === 'n' && correctAnswer === 'no')) {
+       count++ 
         // console.log("Question " + (i + 1) + ": Correct!");
         alert("Question " + (i + 1) + ": Correct!");
     } else {
@@ -57,6 +59,7 @@ function letsPlayaGame() {
       const userGuess = parseInt(prompt("Guess the number:"));
   
       if (userGuess === correctAnswers) {
+        count++
         alert("Thats crazy. You guessed the right number.");
         return; // Exit the game
       } else if (userGuess < correctAnswers) {
@@ -83,6 +86,7 @@ while (attempts > 0 && !correctAnswer) {
     const userGuess = prompt(`You have ${attempts} attempts left. Guess a candy:`).toLowerCase();
 
     if (correctAnswers.includes(userGuess)) {
+        count++
         alert("Correct! That's one of my favorites!");
         correctAnswer = true;
     } else {
@@ -99,5 +103,6 @@ while (attempts > 0 && !correctAnswer) {
 candyCrush();
 
 // Welcome message
-alert("Hey," + uname + " Thanks for comming to my page.")
+alert("Hey," + uname + " Thanks for comming to my page.");
 
+alert("hey you got" + count + " out of 7");
